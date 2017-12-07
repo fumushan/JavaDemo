@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fumushan.model.LogModel;
 import com.fumushan.service.LogService;
+import com.fumushan.util.ResultUtil;
 
 @Controller
 @RequestMapping(value = "log")
@@ -19,8 +20,14 @@ public class LogController {
 
 	@ResponseBody
 	@RequestMapping(value = "findList")
-	public List<LogModel> findList() {
-		return logService.findList();
+	public String findList() {
+		List<LogModel> list;
+		try {
+			list = logService.findList();
+			return ResultUtil.success("查询成功", list);
+		} catch (Exception e) {
+			return ResultUtil.fail("查询失败", null);
+		}
 	}
 
 }
