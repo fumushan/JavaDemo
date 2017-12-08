@@ -13,7 +13,7 @@ public class ResultUtil {
 	public static final String SUCCESS_MSG = "数据加载成功";
 	public static final String FAIL_MSG = "数据加载失败";
 	public static final Integer SUCCESS_CODE = 100;
-	public static final Integer FAIL_CODE = 100;
+	public static final Integer FAIL_CODE = 200;
 
 	private static SerializerFeature[] features = { SerializerFeature.WriteMapNullValue,
 			SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.WriteNullListAsEmpty,
