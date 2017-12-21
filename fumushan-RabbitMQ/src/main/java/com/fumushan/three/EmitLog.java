@@ -6,6 +6,12 @@ package com.fumushan.three;
  * 生产者可以向交换机中发布信息，之后在消费者中创建队列，并将队列和某个将还击绑定。
  * 之后消费者就可以从交换机中获取到生产者发布的信息。
  * 
+ * 接收消息，转发消息到绑定的队列。四种类型：direct, topic, headers and fanout。可以从BuiltinExchangeType中获取
+ * direct：转发消息到routigKey指定的队列
+ * topic：按规则转发消息（最灵活）
+ * headers：（这个还没有接触到）
+ * fanout：转发消息到所有绑定队列
+ * 
  * @author FUMUSHAN
  * @datetime 2017年12月19日 下午4:03:40
  */
